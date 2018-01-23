@@ -1,0 +1,41 @@
+.SearchPage{
+    width:100%;
+    max-width:800px;
+    margin:0 auto;
+    text-align: center;
+
+}
+.profileDetails{
+    list-style: none;
+}
+.SearchPage input{
+    min-width:300px;
+    padding:10px 15px;
+}
+.SearchBox{
+    position: relative;
+}
+.SearchBox ul{
+    position: absolute;
+    top:30px;
+    left:48%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    z-index:10;
+    background: #fff;
+}
+.SearchBox ul{
+    list-style: none;   
+}
+.SearchBox ul li{
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px #eee;
+    min-width: 300px;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+.SearchBox ul li:hover, .SearchBox ul li:focus{
+    background: #eee;
+}
