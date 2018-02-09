@@ -7,7 +7,8 @@ const initialState={
     error:null,
     loading1: true,
     planetInfo:null,
-    planetinfoStart:true
+    planetinfoStart:true,
+    planetOption:null
 }
 const searchReducer=(state= initialState, action)=>{
 

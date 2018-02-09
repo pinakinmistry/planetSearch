@@ -7,7 +7,7 @@ import classes from './SearchPlanet.css';
 import Planet from '../../components/Planet/planet';
 import Planetdescription from '../../components/planetDescription/planetDescription'
 
-class SearchPlanet extends Component{
+export class SearchPlanet extends Component{
   state={
       suggestions: null,
       planetObject:{},
@@ -53,12 +53,6 @@ class SearchPlanet extends Component{
         }         
     }
     render(){
-        let planetDescription= <Spinner/>;
-        if(!this.props.planetinfoStart) {
-            planetDescription= (
-                <Planetdescription planetInfo={this.props.planetInfo.data}/>
-            )
-        }
         let  people= null, peopleData= null;
         if(this.props.loading){
           people =<Spinner/>
@@ -103,7 +97,7 @@ class SearchPlanet extends Component{
                  onChange={this.inputHandler} value={this.state.inputValue}/>
                  {this.state.optionVisibility ? <ul>{suggestedOptions}</ul> : null}
                 </div>
-                {!this.props.planetinfoStart ?planetDescription :null}
+                {!this.props.planetinfoStart ?<Planetdescription planetInfo = {this.props.planetInfo.data}/> :null}
                 
             </div>
             
